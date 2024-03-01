@@ -1,0 +1,67 @@
+:host {
+  width: 8.5in;
+  height: 11in;
+  position: absolute;
+  padding: .5rem;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+}
+
+p {
+  color: black;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 10pt;
+  margin: 0pt;
+}
+
+.s1 {
+  color: black;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 10pt;
+}
+
+.s2 {
+  color: black;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 10pt;
+}
+
+li {
+  display: block;
+}
+
+#l1 {
+  padding-left: 0pt;
+  counter-reset: c1 1;
+}
+
+#l1 > li > *:first-child:before {
+  counter-increment: c1;
+  content: counter(c1, decimal) " ";
+  color: black;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 10pt;
+}
+
+#l1 > li:first-child > *:first-child:before {
+  counter-increment: c1 0;
+}
+
+table, tbody {
+  vertical-align: top;
+  overflow: visible;
+}
